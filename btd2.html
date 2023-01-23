@@ -14,11 +14,10 @@
         const container = document.getElementById("container");
         container.appendChild(player);
         player.load("games/swf/btd2.swf");
-
-function fs() {
-container.requestFullscreen()
-}
     });
+function fs() {
+ player.enterFullscreen();
+};
 </script>
 <div id="container" class="overlay"></div>
 </body>
