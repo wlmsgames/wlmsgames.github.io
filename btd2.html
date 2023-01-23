@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <head>
-<title>Bloons Tower Defense 3</title>
+<link rel="stylesheet" href="index.css">
+<title>Bloons Tower Defense 2</title>
 <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </head>
-<body id="container">
+<body>
 <script>
     window.RufflePlayer = window.RufflePlayer || {};
     window.addEventListener("load", (event) => {
@@ -11,7 +12,8 @@
         const player = ruffle.createPlayer();
         const container = document.getElementById("container");
         container.appendChild(player);
-        player.load("games/swf/btd3.swf");
+        player.load("games/swf/btd2.swf");
     });
 </script>
+<div id="container" class="overlay"></div>
 </body>
