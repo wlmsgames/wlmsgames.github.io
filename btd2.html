@@ -5,7 +5,7 @@
 <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </head>
 <body>
-<button onclick="fs()">Fullscreen</button>
+<button type="button" onclick="fs()">Fullscreen</button>
 <script>
     window.RufflePlayer = window.RufflePlayer || {};
     window.addEventListener("load", (event) => {
@@ -14,10 +14,10 @@
         const container = document.getElementById("container");
         container.appendChild(player);
         player.load("games/swf/btd2.swf");
-    });
 function fs() {
  player.enterFullscreen();
 };
+    });
 </script>
 <div id="container" class="overlay"></div>
 </body>
