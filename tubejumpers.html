@@ -1,6 +1,20 @@
-gameInstance = UnityLoader.instantiate(&quot;gameContainer&quot;, &quot;https://images-docs-opensocial.googleusercontent.com/gadgets/proxy?container=fbk&amp;url=https://sites.google.com/site/fdg5ewgawe4/tube_jumpers.json&quot;, {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, &quot;complete&quot;)}}});
-          this.remove();
-        }
 
-https://sites.google.com/site/111q33444q/templatedata/UnityProgress.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://sites.google.com/site/fdg5ewgawe4/unityloader37.js
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bloons Tower Defense</title>
+<script src="https://sites.google.com/site/fdg5ewgawe4/unityloader37.js"></script>
+          <script src="https://sites.google.com/site/111q33444q/templatedata/UnityProgress.js"></script>
+</head>
+<body>
+<button type="button" onclick="fs()">Fullscreen</button>
+<script>
+          let gameInstance = UnityLoader.instantiate("gameContainer", "https://images-docs-opensocial.googleusercontent.com/gadgets/proxy?container=fbk&url=https://sites.google.com/site/fdg5ewgawe4/tube_jumpers.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
+function fs() {
+ document.getElementByClass('overlay').requestFullscreen();
+};
+</script>
+<div id="gameContainer" class="overlay"></div>
+</body>
+</html>
