@@ -12,7 +12,7 @@
 <script>
           let gameInstance = UnityLoader.instantiate("gameContainer", "https://images-docs-opensocial.googleusercontent.com/gadgets/proxy?container=fbk&url=https://sites.google.com/site/fdg5ewgawe4/tube_jumpers.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
 function fs() {
- document.getElementByClass('overlay').requestFullscreen();
+ document.getElementByClassName('overlay').requestFullscreen();
 };
 </script>
 <div id="gameContainer" class="overlay"></div>
