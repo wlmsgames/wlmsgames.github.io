@@ -7,17 +7,18 @@
 <body>
 <button type="button" onclick="fs()">Fullscreen</button>
 <script>
+var player;
     window.RufflePlayer = window.RufflePlayer || {};
     window.addEventListener("load", (event) => {
         const ruffle = window.RufflePlayer.newest();
-        const player = ruffle.createPlayer();
+        player = ruffle.createPlayer();
         const container = document.getElementById("container");
         container.appendChild(player);
         player.load("games/swf/btd2.swf");
+});
 function fs() {
  player.enterFullscreen();
 };
-    });
 </script>
 <div id="container" class="overlay"></div>
 </body>
