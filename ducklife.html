@@ -1,1 +1,16 @@
-<iframe src="./game.html" width="1920" height="1080" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Duck Life 1</title>
+</head>
+<body>
+<button type="button" onclick="fs()">Fullscreen</button>
+<script>
+function fs() {
+ let divvv = document.getElementById('container');
+  divvv.requestFullscreen();
+};
+</script>
+<div id="container" class="overlay"><iframe src="games/ducklife/game.html"></iframe></div>
+</body>
+</html>
