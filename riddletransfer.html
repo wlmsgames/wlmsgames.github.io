@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Riddle Transfe4</title>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body>
+<button type="button" onclick="fs()">Fullscreen</button>
+<script>
+var player;
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("games/swf/riddle-transfer.swf");
+});
+function fs() {
+ player.enterFullscreen();
+};
+</script>
+<div id="container" class="overlay"></div>
+</body>
+</html>
