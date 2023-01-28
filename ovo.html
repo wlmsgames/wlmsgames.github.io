@@ -6,12 +6,12 @@
 </head>
 <body>
 <button type="button" onclick="fs()">Fullscreen</button>
+<div id="container" class="overlay"><iframe allowFullScreen="true" src="/games/ovo/index.html" id="player"></iframe></div>
 <script>
 var player = document.getElementById('player');
 function fs() {
  player.requestFullscreen();
 };
 </script>
-<div id="container" class="overlay"><iframe allowFullScreen="true" src="/games/ovo/index.html" id="player"></iframe></div>
 </body>
 </html>
