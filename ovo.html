@@ -7,11 +7,11 @@
 <body>
 <button type="button" onclick="fs()">Fullscreen</button>
 <script>
-var player = document.getElementByClassName('player');
+var player = document.getElementById('player');
 function fs() {
  player.requestFullscreen();
 };
 </script>
-<div id="container" class="overlay"><iframe src="/games/ovo/index.html" class="player"></iframe></div>
+<div id="container" class="overlay"><iframe src="/games/ovo/index.html" id="player"></iframe></div>
 </body>
 </html>
