@@ -8,13 +8,17 @@
 <script>
   var games = new URLSearchParams(window.location.search);
 var player;
+
+  var game;
+  if (games.get('game') == "Super Smash Flash") game = 'SuperSmash.bin'
+    else game = window.location.origin + '/games/swf/' + games.get('game') + '.swf'
     window.RufflePlayer = window.RufflePlayer || {};
     window.addEventListener("load", (event) => {
         const ruffle = window.RufflePlayer.newest();
         player = ruffle.createPlayer();
         const container = document.getElementById("container");
         container.appendChild(player);
-        player.load(window.location.origin + '/games/swf/' + games.get('game') + '.swf');
+        player.load();
 });
 
   window.document.title = games.get('game');
