@@ -18,7 +18,7 @@ var player;
         player = ruffle.createPlayer();
         const container = document.getElementById("container");
         container.appendChild(player);
-        player.load();
+        player.load(game);
 });
 
   window.document.title = games.get('game');
