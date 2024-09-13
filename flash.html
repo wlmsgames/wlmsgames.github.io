@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ZZZ<!DOCTYPE html>
 <html>
 <head>
 <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
@@ -10,7 +10,7 @@
 var player;
 
   var game;
-  if (games.get('game') == "Super Smash Flash") game = 'SuperSmash.bin'
+  if (games.get('game') == "Super Smash Flash") game = `${window.location.origin}/games/swf/SuperSmash.bin`
     else game = window.location.origin + '/games/swf/' + games.get('game') + '.swf'
     window.RufflePlayer = window.RufflePlayer || {};
     window.addEventListener("load", (event) => {
