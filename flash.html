@@ -7,7 +7,7 @@
 <body>
 <button type="button" onclick="fs()">Fullscreen</button>
 <script>
-  const urlParams = new URLSearchParams(window.location.search);
+  var games = new URLSearchParams(window.location.search);
 var player;
     window.RufflePlayer = window.RufflePlayer || {};
     window.addEventListener("load", (event) => {
@@ -15,7 +15,7 @@ var player;
         player = ruffle.createPlayer();
         const container = document.getElementById("container");
         container.appendChild(player);
-        player.load(`games/swf/${urlParams.get('game')}.swf`);
+        player.load(`games/swf/${games.get('game')}.swf`);
 });
 function fs() {
  player.enterFullscreen();
