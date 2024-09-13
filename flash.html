@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Breaking The Bank</title>
 <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </head>
 <body>
@@ -15,8 +14,10 @@ var player;
         player = ruffle.createPlayer();
         const container = document.getElementById("container");
         container.appendChild(player);
-        player.load('games/swf/' + games.get('game')} + '.swf');
+        player.load(window.location.host + '/games/swf/' + games.get('game') + '.swf');
 });
+
+  window.document.title = games.get('game');
 function fs() {
  player.enterFullscreen();
 };
